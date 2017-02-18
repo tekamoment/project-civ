@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkTrialViewController: UIViewController {
 
-    let elijahURL = "10.100.67.110:9999/main/register"
+    let elijahURL = "10.101.11.143:9999/main/register"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class NetworkTrialViewController: UIViewController {
                 return
             }
             
-            print("JSON returns: \(response.result.value)")
+            print("JSON returns: \(response.result.value!)")
         }
     }
 

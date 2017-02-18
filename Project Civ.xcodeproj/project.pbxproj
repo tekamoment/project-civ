@@ -15,6 +15,9 @@
 		184534721E58145F0035409B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534711E58145F0035409B /* Project.swift */; };
 		184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534731E5814DD0035409B /* NetworkTrialViewController.swift */; };
 		184534761E581A640035409B /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534751E581A640035409B /* ProjectViewController.swift */; };
+		184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534771E581AB00035409B /* PostUpdateViewController.swift */; };
+		1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534791E581AE60035409B /* SuggestionViewController.swift */; };
+		185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */; };
 		2BAC5DB7173EAB9575398F94 /* Pods_Project_Civ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		184534711E58145F0035409B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = Model/Project.swift; sourceTree = "<group>"; };
 		184534731E5814DD0035409B /* NetworkTrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTrialViewController.swift; sourceTree = "<group>"; };
 		184534751E581A640035409B /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		184534771E581AB00035409B /* PostUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUpdateViewController.swift; sourceTree = "<group>"; };
+		184534791E581AE60035409B /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyProjectsViewController.swift; sourceTree = "<group>"; };
 		8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Civ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B168ECDE434D8799DCBEE /* Pods-Project Civ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Civ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +86,10 @@
 				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
 				184534631E5809FD0035409B /* Main.storyboard */,
 				184534711E58145F0035409B /* Project.swift */,
+				185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */,
 				184534751E581A640035409B /* ProjectViewController.swift */,
+				184534771E581AB00035409B /* PostUpdateViewController.swift */,
+				184534791E581AE60035409B /* SuggestionViewController.swift */,
 				184534661E5809FD0035409B /* Assets.xcassets */,
 				184534681E5809FD0035409B /* LaunchScreen.storyboard */,
 				1845346B1E5809FD0035409B /* Info.plist */,
@@ -221,11 +230,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */,
 				184534761E581A640035409B /* ProjectViewController.swift in Sources */,
 				184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */,
+				185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
 				184534721E58145F0035409B /* Project.swift in Sources */,
+				184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
