@@ -16,6 +16,10 @@
 		1825A5111E58314100676294 /* Tofino Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5091E58314100676294 /* Tofino Thin.ttf */; };
 		1825A5121E58314100676294 /* Tofino Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A50A1E58314100676294 /* Tofino Ultra.ttf */; };
 		1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */; };
+		1825A5171E58398A00676294 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5161E58398A00676294 /* AddProjectViewController.swift */; };
+		1825A51D1E583EDB00676294 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A51C1E583EDB00676294 /* FeedViewController.swift */; };
+		1825A51F1E5842BF00676294 /* ProjectUpdateSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */; };
+		1825A5221E58434E00676294 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5211E58434E00676294 /* ProjectUpdate.swift */; };
 		184534601E5809FD0035409B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845345F1E5809FD0035409B /* AppDelegate.swift */; };
 		184534621E5809FD0035409B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534611E5809FD0035409B /* ViewController.swift */; };
 		184534651E5809FD0035409B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184534631E5809FD0035409B /* Main.storyboard */; };
@@ -27,6 +31,15 @@
 		184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534771E581AB00035409B /* PostUpdateViewController.swift */; };
 		1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534791E581AE60035409B /* SuggestionViewController.swift */; };
 		185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */; };
+		18E391E51E58488600704FC0 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E41E58488600704FC0 /* TextCell.swift */; };
+		18E391E71E5848D000704FC0 /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E61E5848D000704FC0 /* TextSize.swift */; };
+		18E391E91E58585400704FC0 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E81E58585400704FC0 /* DateCell.swift */; };
+		18E391EB1E5859A500704FC0 /* StaticDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391EA1E5859A500704FC0 /* StaticDataLoader.swift */; };
+		18E391ED1E585D4100704FC0 /* NSObject+IGListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391EC1E585D4100704FC0 /* NSObject+IGListDiffable.swift */; };
+		18E391F11E586D9B00704FC0 /* ProjectNameLocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391F01E586D9B00704FC0 /* ProjectNameLocationViewCell.swift */; };
+		18E391F31E586F2800704FC0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391F21E586F2800704FC0 /* UIColor+Hex.swift */; };
+		18E391F51E58725300704FC0 /* FeedProjectInfoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391F41E58725300704FC0 /* FeedProjectInfoSectionController.swift */; };
+		18E391F81E587A7900704FC0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391F71E587A7900704FC0 /* ImageCell.swift */; };
 		2BAC5DB7173EAB9575398F94 /* Pods_Project_Civ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +54,10 @@
 		1825A5091E58314100676294 /* Tofino Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Thin.ttf"; sourceTree = "<group>"; };
 		1825A50A1E58314100676294 /* Tofino Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Ultra.ttf"; sourceTree = "<group>"; };
 		1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TitleView.swift"; sourceTree = "<group>"; };
+		1825A5161E58398A00676294 /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		1825A51C1E583EDB00676294 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectUpdateSectionController.swift; sourceTree = "<group>"; };
+		1825A5211E58434E00676294 /* ProjectUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectUpdate.swift; path = Model/ProjectUpdate.swift; sourceTree = "<group>"; };
 		1845345C1E5809FD0035409B /* Project Civ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Civ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845345F1E5809FD0035409B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184534611E5809FD0035409B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +71,15 @@
 		184534771E581AB00035409B /* PostUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUpdateViewController.swift; sourceTree = "<group>"; };
 		184534791E581AE60035409B /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyProjectsViewController.swift; sourceTree = "<group>"; };
+		18E391E41E58488600704FC0 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		18E391E61E5848D000704FC0 /* TextSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
+		18E391E81E58585400704FC0 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		18E391EA1E5859A500704FC0 /* StaticDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticDataLoader.swift; sourceTree = "<group>"; };
+		18E391EC1E585D4100704FC0 /* NSObject+IGListDiffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+IGListDiffable.swift"; sourceTree = "<group>"; };
+		18E391F01E586D9B00704FC0 /* ProjectNameLocationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectNameLocationViewCell.swift; sourceTree = "<group>"; };
+		18E391F21E586F2800704FC0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		18E391F41E58725300704FC0 /* FeedProjectInfoSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedProjectInfoSectionController.swift; sourceTree = "<group>"; };
+		18E391F71E587A7900704FC0 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Civ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B168ECDE434D8799DCBEE /* Pods-Project Civ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Civ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +119,18 @@
 			name = Tofino;
 			sourceTree = "<group>";
 		};
+		1825A5201E5842C200676294 /* Section Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18E391F61E58757300704FC0 /* Section Cells */,
+				1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */,
+				18E391F41E58725300704FC0 /* FeedProjectInfoSectionController.swift */,
+				18E391EA1E5859A500704FC0 /* StaticDataLoader.swift */,
+				18E391EC1E585D4100704FC0 /* NSObject+IGListDiffable.swift */,
+			);
+			name = "Section Controller";
+			sourceTree = "<group>";
+		};
 		184534531E5809FD0035409B = {
 			isa = PBXGroup;
 			children = (
@@ -115,21 +153,54 @@
 			isa = PBXGroup;
 			children = (
 				1845345F1E5809FD0035409B /* AppDelegate.swift */,
-				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
-				184534611E5809FD0035409B /* ViewController.swift */,
-				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
+				18E391E21E58484E00704FC0 /* View Controllers */,
 				184534631E5809FD0035409B /* Main.storyboard */,
-				184534711E58145F0035409B /* Project.swift */,
-				185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */,
-				184534751E581A640035409B /* ProjectViewController.swift */,
-				184534771E581AB00035409B /* PostUpdateViewController.swift */,
-				184534791E581AE60035409B /* SuggestionViewController.swift */,
+				18E391E31E58485900704FC0 /* Model */,
+				18E391F21E586F2800704FC0 /* UIColor+Hex.swift */,
+				1825A5201E5842C200676294 /* Section Controller */,
 				184534661E5809FD0035409B /* Assets.xcassets */,
 				184534681E5809FD0035409B /* LaunchScreen.storyboard */,
 				1845346B1E5809FD0035409B /* Info.plist */,
 				1825A5131E58314600676294 /* Tofino */,
 			);
 			path = "Project Civ";
+			sourceTree = "<group>";
+		};
+		18E391E21E58484E00704FC0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
+				184534611E5809FD0035409B /* ViewController.swift */,
+				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
+				1825A51C1E583EDB00676294 /* FeedViewController.swift */,
+				1825A5161E58398A00676294 /* AddProjectViewController.swift */,
+				185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */,
+				184534751E581A640035409B /* ProjectViewController.swift */,
+				184534771E581AB00035409B /* PostUpdateViewController.swift */,
+				184534791E581AE60035409B /* SuggestionViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		18E391E31E58485900704FC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				184534711E58145F0035409B /* Project.swift */,
+				1825A5211E58434E00676294 /* ProjectUpdate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18E391F61E58757300704FC0 /* Section Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18E391F71E587A7900704FC0 /* ImageCell.swift */,
+				18E391F01E586D9B00704FC0 /* ProjectNameLocationViewCell.swift */,
+				18E391E41E58488600704FC0 /* TextCell.swift */,
+				18E391E61E5848D000704FC0 /* TextSize.swift */,
+				18E391E81E58585400704FC0 /* DateCell.swift */,
+			);
+			name = "Section Cells";
 			sourceTree = "<group>";
 		};
 		6D87CDF7B3F0199CC6B46CC4 /* Pods */ = {
@@ -273,14 +344,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E391F31E586F2800704FC0 /* UIColor+Hex.swift in Sources */,
+				18E391F51E58725300704FC0 /* FeedProjectInfoSectionController.swift in Sources */,
+				18E391ED1E585D4100704FC0 /* NSObject+IGListDiffable.swift in Sources */,
 				1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */,
 				184534761E581A640035409B /* ProjectViewController.swift in Sources */,
 				184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */,
+				18E391EB1E5859A500704FC0 /* StaticDataLoader.swift in Sources */,
 				185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
 				1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */,
+				18E391F11E586D9B00704FC0 /* ProjectNameLocationViewCell.swift in Sources */,
+				1825A5221E58434E00676294 /* ProjectUpdate.swift in Sources */,
+				18E391E91E58585400704FC0 /* DateCell.swift in Sources */,
+				18E391F81E587A7900704FC0 /* ImageCell.swift in Sources */,
+				1825A51F1E5842BF00676294 /* ProjectUpdateSectionController.swift in Sources */,
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
 				184534721E58145F0035409B /* Project.swift in Sources */,
+				18E391E51E58488600704FC0 /* TextCell.swift in Sources */,
+				18E391E71E5848D000704FC0 /* TextSize.swift in Sources */,
+				1825A5171E58398A00676294 /* AddProjectViewController.swift in Sources */,
+				1825A51D1E583EDB00676294 /* FeedViewController.swift in Sources */,
 				184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
