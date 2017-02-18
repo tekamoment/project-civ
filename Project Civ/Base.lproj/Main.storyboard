@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eq5-c1-7QU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_Civ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyU-ij-vie">
+                                <rect key="frame" x="276" y="629" width="83" height="30"/>
+                                <state key="normal" title="Call Camera"/>
+                                <connections>
+                                    <action selector="callCameraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aG-i8-iCK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03Y-yz-rCC">
+                                <rect key="frame" x="16" y="28" width="343" height="593"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNs-vB-3A9">
+                                <rect key="frame" x="16" y="629" width="78" height="30"/>
+                                <state key="normal" title="Call Library"/>
+                                <connections>
+                                    <action selector="callLibraryPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGe-Vo-K0X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pyU-ij-vie" firstAttribute="trailing" secondItem="03Y-yz-rCC" secondAttribute="trailing" id="4Js-R1-EhP"/>
+                            <constraint firstItem="pyU-ij-vie" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4WI-Ee-7O5"/>
+                            <constraint firstItem="pyU-ij-vie" firstAttribute="top" secondItem="03Y-yz-rCC" secondAttribute="bottom" constant="8" symbolic="YES" id="9dZ-bP-PMf"/>
+                            <constraint firstItem="03Y-yz-rCC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ea4-DS-YKT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pyU-ij-vie" secondAttribute="bottom" constant="8" symbolic="YES" id="KXy-3I-hwr"/>
+                            <constraint firstItem="vNs-vB-3A9" firstAttribute="leading" secondItem="03Y-yz-rCC" secondAttribute="leading" id="LjG-zk-dbU"/>
+                            <constraint firstItem="03Y-yz-rCC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="MNO-AK-qph"/>
+                            <constraint firstItem="vNs-vB-3A9" firstAttribute="baseline" secondItem="pyU-ij-vie" secondAttribute="baseline" id="slQ-fb-Tdk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="03Y-yz-rCC" id="jkB-ey-40U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="124" y="38.23088455772114"/>
+        </scene>
+        <!--Network Trial View Controller-->
+        <scene sceneID="9Yi-cj-IG7">
+            <objects>
+                <viewController id="Eq5-c1-7QU" customClass="NetworkTrialViewController" customModule="Project_Civ" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5hK-9X-wOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="rbP-Av-439"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LFS-iw-s1O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-Ql-twm">
+                                <rect key="frame" x="142" y="318" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Network"/>
+                                <connections>
+                                    <action selector="testNetworkPressed:" destination="Eq5-c1-7QU" eventType="touchUpInside" id="ajc-v3-9gd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uax-ll-bgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="45"/>
         </scene>
     </scenes>
 </document>
