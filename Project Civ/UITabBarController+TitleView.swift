@@ -11,8 +11,6 @@ import UIKit
 
 extension UITabBarController {
     func setCustomTitleView(title: String) {
-        let titleLabel = UILabel()
-        
         let attributes: NSDictionary = [
             NSFontAttributeName:UIFont(name: "Tofino-Bold", size: 17)!,
             NSForegroundColorAttributeName:UIColor.black,
@@ -21,11 +19,18 @@ extension UITabBarController {
         
         let attributedTitle = NSAttributedString(string: title, attributes: attributes as? [String : AnyObject])
         
-        titleLabel.attributedText = attributedTitle
-        titleLabel.sizeToFit()
-        //        self.navigationItem.titleView = titleLabel
-//        self.tabBarController?.navigationItem.titleView = titleLabel
-        navigationItem.titleView = titleLabel
+        setCustomTitleViewWithAttributedString(attributedTitle)
 
     }
+    
+    func setCustomTitleViewWithAttributedString(_ attrString: NSAttributedString) {
+        let titleLabel = UILabel()
+        
+        titleLabel.attributedText = attrString
+        titleLabel.sizeToFit()
+        
+        navigationItem.titleView = titleLabel
+    }
+    
+    
 }
