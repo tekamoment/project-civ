@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1825A50B1E58314100676294 /* Tofino Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5031E58314100676294 /* Tofino Black.ttf */; };
+		1825A50C1E58314100676294 /* Tofino Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5041E58314100676294 /* Tofino Bold.ttf */; };
+		1825A50D1E58314100676294 /* Tofino Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5051E58314100676294 /* Tofino Book.ttf */; };
+		1825A50E1E58314100676294 /* Tofino Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5061E58314100676294 /* Tofino Light.ttf */; };
+		1825A50F1E58314100676294 /* Tofino Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5071E58314100676294 /* Tofino Medium.ttf */; };
+		1825A5101E58314100676294 /* Tofino Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5081E58314100676294 /* Tofino Regular.ttf */; };
+		1825A5111E58314100676294 /* Tofino Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5091E58314100676294 /* Tofino Thin.ttf */; };
+		1825A5121E58314100676294 /* Tofino Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A50A1E58314100676294 /* Tofino Ultra.ttf */; };
+		1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */; };
 		184534601E5809FD0035409B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845345F1E5809FD0035409B /* AppDelegate.swift */; };
 		184534621E5809FD0035409B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534611E5809FD0035409B /* ViewController.swift */; };
 		184534651E5809FD0035409B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184534631E5809FD0035409B /* Main.storyboard */; };
@@ -23,6 +32,15 @@
 
 /* Begin PBXFileReference section */
 		10583D41268B7B00E1FCC537 /* Pods-Project Civ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Civ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ.release.xcconfig"; sourceTree = "<group>"; };
+		1825A5031E58314100676294 /* Tofino Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Black.ttf"; sourceTree = "<group>"; };
+		1825A5041E58314100676294 /* Tofino Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Bold.ttf"; sourceTree = "<group>"; };
+		1825A5051E58314100676294 /* Tofino Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Book.ttf"; sourceTree = "<group>"; };
+		1825A5061E58314100676294 /* Tofino Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Light.ttf"; sourceTree = "<group>"; };
+		1825A5071E58314100676294 /* Tofino Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Medium.ttf"; sourceTree = "<group>"; };
+		1825A5081E58314100676294 /* Tofino Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Regular.ttf"; sourceTree = "<group>"; };
+		1825A5091E58314100676294 /* Tofino Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Thin.ttf"; sourceTree = "<group>"; };
+		1825A50A1E58314100676294 /* Tofino Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Ultra.ttf"; sourceTree = "<group>"; };
+		1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TitleView.swift"; sourceTree = "<group>"; };
 		1845345C1E5809FD0035409B /* Project Civ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Civ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845345F1E5809FD0035409B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184534611E5809FD0035409B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +78,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1825A5131E58314600676294 /* Tofino */ = {
+			isa = PBXGroup;
+			children = (
+				1825A5031E58314100676294 /* Tofino Black.ttf */,
+				1825A5041E58314100676294 /* Tofino Bold.ttf */,
+				1825A5051E58314100676294 /* Tofino Book.ttf */,
+				1825A5061E58314100676294 /* Tofino Light.ttf */,
+				1825A5071E58314100676294 /* Tofino Medium.ttf */,
+				1825A5081E58314100676294 /* Tofino Regular.ttf */,
+				1825A5091E58314100676294 /* Tofino Thin.ttf */,
+				1825A50A1E58314100676294 /* Tofino Ultra.ttf */,
+			);
+			name = Tofino;
+			sourceTree = "<group>";
+		};
 		184534531E5809FD0035409B = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1845345F1E5809FD0035409B /* AppDelegate.swift */,
+				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
 				184534611E5809FD0035409B /* ViewController.swift */,
 				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
 				184534631E5809FD0035409B /* Main.storyboard */,
@@ -93,6 +127,7 @@
 				184534661E5809FD0035409B /* Assets.xcassets */,
 				184534681E5809FD0035409B /* LaunchScreen.storyboard */,
 				1845346B1E5809FD0035409B /* Info.plist */,
+				1825A5131E58314600676294 /* Tofino */,
 			);
 			path = "Project Civ";
 			sourceTree = "<group>";
@@ -169,9 +204,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1825A50B1E58314100676294 /* Tofino Black.ttf in Resources */,
+				1825A5121E58314100676294 /* Tofino Ultra.ttf in Resources */,
 				1845346A1E5809FD0035409B /* LaunchScreen.storyboard in Resources */,
+				1825A5101E58314100676294 /* Tofino Regular.ttf in Resources */,
+				1825A5111E58314100676294 /* Tofino Thin.ttf in Resources */,
+				1825A50C1E58314100676294 /* Tofino Bold.ttf in Resources */,
 				184534671E5809FD0035409B /* Assets.xcassets in Resources */,
+				1825A50E1E58314100676294 /* Tofino Light.ttf in Resources */,
+				1825A50F1E58314100676294 /* Tofino Medium.ttf in Resources */,
 				184534651E5809FD0035409B /* Main.storyboard in Resources */,
+				1825A50D1E58314100676294 /* Tofino Book.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +278,7 @@
 				184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */,
 				185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
+				1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */,
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
 				184534721E58145F0035409B /* Project.swift in Sources */,
 				184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */,
