@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyDodrTvWnK7fj_vnT68KI-S6OkoxHnu4oI")
+        UINavigationBar.appearance().barTintColor = UIColor(hex6: 0x387780)
+        UINavigationBar.appearance().tintColor = UIColor.white
+
+        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().tintColor = UIColor(hex6: 0x387780)
+        
         return true
     }
 

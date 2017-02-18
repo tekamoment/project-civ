@@ -16,7 +16,6 @@
 		1825A5111E58314100676294 /* Tofino Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A5091E58314100676294 /* Tofino Thin.ttf */; };
 		1825A5121E58314100676294 /* Tofino Ultra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825A50A1E58314100676294 /* Tofino Ultra.ttf */; };
 		1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */; };
-		1825A5171E58398A00676294 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5161E58398A00676294 /* AddProjectViewController.swift */; };
 		1825A51D1E583EDB00676294 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A51C1E583EDB00676294 /* FeedViewController.swift */; };
 		1825A51F1E5842BF00676294 /* ProjectUpdateSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */; };
 		1825A5221E58434E00676294 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1825A5211E58434E00676294 /* ProjectUpdate.swift */; };
@@ -31,6 +30,20 @@
 		184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534771E581AB00035409B /* PostUpdateViewController.swift */; };
 		1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534791E581AE60035409B /* SuggestionViewController.swift */; };
 		185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */; };
+		18978C061E5890EF0009A028 /* Arete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18978C051E5890EF0009A028 /* Arete.jpg */; };
+		18978C081E589CF50009A028 /* ProjectCoverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18978C071E589CF50009A028 /* ProjectCoverViewCell.swift */; };
+		18978C0A1E589E2A0009A028 /* ProjectCoverSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18978C091E589E2A0009A028 /* ProjectCoverSectionController.swift */; };
+		18990E551E58B8E000EBCF65 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E541E58B8E000EBCF65 /* AddProjectViewController.swift */; };
+		18990E581E58C87B00EBCF65 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E571E58C87B00EBCF65 /* CustomCells.swift */; };
+		18990E5C1E58D79400EBCF65 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E5A1E58D79400EBCF65 /* ImagePickerController.swift */; };
+		18990E5D1E58D79400EBCF65 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E5B1E58D79400EBCF65 /* ImageRow.swift */; };
+		18990E5F1E58DAE300EBCF65 /* ProjectInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E5E1E58DAE300EBCF65 /* ProjectInfoViewController.swift */; };
+		18990E611E58DC3F00EBCF65 /* ProjectInfoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E601E58DC3F00EBCF65 /* ProjectInfoSectionController.swift */; };
+		18990E631E58DF0900EBCF65 /* BoldTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18990E621E58DF0900EBCF65 /* BoldTextCell.swift */; };
+		189D0E281E58A6300046DCD5 /* ProjectUpdateTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D0E271E58A6300046DCD5 /* ProjectUpdateTitleCell.swift */; };
+		189D0E2C1E58ABDA0046DCD5 /* hellohello.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */; };
+		189D0E2E1E58B79B0046DCD5 /* TrackedProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D0E2D1E58B79B0046DCD5 /* TrackedProjectsViewController.swift */; };
+		18A9A6801E58E5AC00315A8E /* VoteSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A67F1E58E5AC00315A8E /* VoteSectionController.swift */; };
 		18E391E51E58488600704FC0 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E41E58488600704FC0 /* TextCell.swift */; };
 		18E391E71E5848D000704FC0 /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E61E5848D000704FC0 /* TextSize.swift */; };
 		18E391E91E58585400704FC0 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E81E58585400704FC0 /* DateCell.swift */; };
@@ -54,7 +67,6 @@
 		1825A5091E58314100676294 /* Tofino Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Thin.ttf"; sourceTree = "<group>"; };
 		1825A50A1E58314100676294 /* Tofino Ultra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tofino Ultra.ttf"; sourceTree = "<group>"; };
 		1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TitleView.swift"; sourceTree = "<group>"; };
-		1825A5161E58398A00676294 /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		1825A51C1E583EDB00676294 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectUpdateSectionController.swift; sourceTree = "<group>"; };
 		1825A5211E58434E00676294 /* ProjectUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectUpdate.swift; path = Model/ProjectUpdate.swift; sourceTree = "<group>"; };
@@ -71,6 +83,20 @@
 		184534771E581AB00035409B /* PostUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUpdateViewController.swift; sourceTree = "<group>"; };
 		184534791E581AE60035409B /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyProjectsViewController.swift; sourceTree = "<group>"; };
+		18978C051E5890EF0009A028 /* Arete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arete.jpg; sourceTree = "<group>"; };
+		18978C071E589CF50009A028 /* ProjectCoverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCoverViewCell.swift; sourceTree = "<group>"; };
+		18978C091E589E2A0009A028 /* ProjectCoverSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCoverSectionController.swift; sourceTree = "<group>"; };
+		18990E541E58B8E000EBCF65 /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		18990E571E58C87B00EBCF65 /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		18990E5A1E58D79400EBCF65 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		18990E5B1E58D79400EBCF65 /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		18990E5E1E58DAE300EBCF65 /* ProjectInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoViewController.swift; sourceTree = "<group>"; };
+		18990E601E58DC3F00EBCF65 /* ProjectInfoSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfoSectionController.swift; sourceTree = "<group>"; };
+		18990E621E58DF0900EBCF65 /* BoldTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoldTextCell.swift; sourceTree = "<group>"; };
+		189D0E271E58A6300046DCD5 /* ProjectUpdateTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectUpdateTitleCell.swift; sourceTree = "<group>"; };
+		189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hellohello.jpg; sourceTree = "<group>"; };
+		189D0E2D1E58B79B0046DCD5 /* TrackedProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackedProjectsViewController.swift; sourceTree = "<group>"; };
+		18A9A67F1E58E5AC00315A8E /* VoteSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteSectionController.swift; sourceTree = "<group>"; };
 		18E391E41E58488600704FC0 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		18E391E61E5848D000704FC0 /* TextSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
 		18E391E81E58585400704FC0 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
@@ -124,9 +150,14 @@
 			children = (
 				18E391F61E58757300704FC0 /* Section Cells */,
 				1825A51E1E5842BF00676294 /* ProjectUpdateSectionController.swift */,
+				18990E601E58DC3F00EBCF65 /* ProjectInfoSectionController.swift */,
+				18978C091E589E2A0009A028 /* ProjectCoverSectionController.swift */,
+				189D0E2D1E58B79B0046DCD5 /* TrackedProjectsViewController.swift */,
 				18E391F41E58725300704FC0 /* FeedProjectInfoSectionController.swift */,
 				18E391EA1E5859A500704FC0 /* StaticDataLoader.swift */,
 				18E391EC1E585D4100704FC0 /* NSObject+IGListDiffable.swift */,
+				18A9A67F1E58E5AC00315A8E /* VoteSectionController.swift */,
+				18990E571E58C87B00EBCF65 /* CustomCells.swift */,
 			);
 			name = "Section Controller";
 			sourceTree = "<group>";
@@ -153,29 +184,42 @@
 			isa = PBXGroup;
 			children = (
 				1845345F1E5809FD0035409B /* AppDelegate.swift */,
+				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
 				18E391E21E58484E00704FC0 /* View Controllers */,
 				184534631E5809FD0035409B /* Main.storyboard */,
 				18E391E31E58485900704FC0 /* Model */,
 				18E391F21E586F2800704FC0 /* UIColor+Hex.swift */,
+				18990E591E58D79400EBCF65 /* ImageRow */,
 				1825A5201E5842C200676294 /* Section Controller */,
 				184534661E5809FD0035409B /* Assets.xcassets */,
 				184534681E5809FD0035409B /* LaunchScreen.storyboard */,
 				1845346B1E5809FD0035409B /* Info.plist */,
+				189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */,
+				18978C051E5890EF0009A028 /* Arete.jpg */,
 				1825A5131E58314600676294 /* Tofino */,
 			);
 			path = "Project Civ";
 			sourceTree = "<group>";
 		};
+		18990E591E58D79400EBCF65 /* ImageRow */ = {
+			isa = PBXGroup;
+			children = (
+				18990E5A1E58D79400EBCF65 /* ImagePickerController.swift */,
+				18990E5B1E58D79400EBCF65 /* ImageRow.swift */,
+			);
+			path = ImageRow;
+			sourceTree = "<group>";
+		};
 		18E391E21E58484E00704FC0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
+				18990E541E58B8E000EBCF65 /* AddProjectViewController.swift */,
 				184534611E5809FD0035409B /* ViewController.swift */,
 				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
 				1825A51C1E583EDB00676294 /* FeedViewController.swift */,
-				1825A5161E58398A00676294 /* AddProjectViewController.swift */,
 				185AA6771E58235B00E50847 /* NearbyProjectsViewController.swift */,
 				184534751E581A640035409B /* ProjectViewController.swift */,
+				18990E5E1E58DAE300EBCF65 /* ProjectInfoViewController.swift */,
 				184534771E581AB00035409B /* PostUpdateViewController.swift */,
 				184534791E581AE60035409B /* SuggestionViewController.swift */,
 			);
@@ -196,7 +240,10 @@
 			children = (
 				18E391F71E587A7900704FC0 /* ImageCell.swift */,
 				18E391F01E586D9B00704FC0 /* ProjectNameLocationViewCell.swift */,
+				18978C071E589CF50009A028 /* ProjectCoverViewCell.swift */,
 				18E391E41E58488600704FC0 /* TextCell.swift */,
+				189D0E271E58A6300046DCD5 /* ProjectUpdateTitleCell.swift */,
+				18990E621E58DF0900EBCF65 /* BoldTextCell.swift */,
 				18E391E61E5848D000704FC0 /* TextSize.swift */,
 				18E391E81E58585400704FC0 /* DateCell.swift */,
 			);
@@ -280,9 +327,11 @@
 				1845346A1E5809FD0035409B /* LaunchScreen.storyboard in Resources */,
 				1825A5101E58314100676294 /* Tofino Regular.ttf in Resources */,
 				1825A5111E58314100676294 /* Tofino Thin.ttf in Resources */,
+				18978C061E5890EF0009A028 /* Arete.jpg in Resources */,
 				1825A50C1E58314100676294 /* Tofino Bold.ttf in Resources */,
 				184534671E5809FD0035409B /* Assets.xcassets in Resources */,
 				1825A50E1E58314100676294 /* Tofino Light.ttf in Resources */,
+				189D0E2C1E58ABDA0046DCD5 /* hellohello.jpg in Resources */,
 				1825A50F1E58314100676294 /* Tofino Medium.ttf in Resources */,
 				184534651E5809FD0035409B /* Main.storyboard in Resources */,
 				1825A50D1E58314100676294 /* Tofino Book.ttf in Resources */,
@@ -348,22 +397,33 @@
 				18E391F51E58725300704FC0 /* FeedProjectInfoSectionController.swift in Sources */,
 				18E391ED1E585D4100704FC0 /* NSObject+IGListDiffable.swift in Sources */,
 				1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */,
+				18990E551E58B8E000EBCF65 /* AddProjectViewController.swift in Sources */,
 				184534761E581A640035409B /* ProjectViewController.swift in Sources */,
+				18A9A6801E58E5AC00315A8E /* VoteSectionController.swift in Sources */,
+				18978C0A1E589E2A0009A028 /* ProjectCoverSectionController.swift in Sources */,
 				184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */,
 				18E391EB1E5859A500704FC0 /* StaticDataLoader.swift in Sources */,
 				185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
 				1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */,
+				189D0E2E1E58B79B0046DCD5 /* TrackedProjectsViewController.swift in Sources */,
 				18E391F11E586D9B00704FC0 /* ProjectNameLocationViewCell.swift in Sources */,
 				1825A5221E58434E00676294 /* ProjectUpdate.swift in Sources */,
+				18990E611E58DC3F00EBCF65 /* ProjectInfoSectionController.swift in Sources */,
 				18E391E91E58585400704FC0 /* DateCell.swift in Sources */,
+				18990E5F1E58DAE300EBCF65 /* ProjectInfoViewController.swift in Sources */,
+				18990E581E58C87B00EBCF65 /* CustomCells.swift in Sources */,
+				18990E631E58DF0900EBCF65 /* BoldTextCell.swift in Sources */,
 				18E391F81E587A7900704FC0 /* ImageCell.swift in Sources */,
 				1825A51F1E5842BF00676294 /* ProjectUpdateSectionController.swift in Sources */,
+				18990E5C1E58D79400EBCF65 /* ImagePickerController.swift in Sources */,
+				189D0E281E58A6300046DCD5 /* ProjectUpdateTitleCell.swift in Sources */,
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
+				18990E5D1E58D79400EBCF65 /* ImageRow.swift in Sources */,
 				184534721E58145F0035409B /* Project.swift in Sources */,
+				18978C081E589CF50009A028 /* ProjectCoverViewCell.swift in Sources */,
 				18E391E51E58488600704FC0 /* TextCell.swift in Sources */,
 				18E391E71E5848D000704FC0 /* TextSize.swift in Sources */,
-				1825A5171E58398A00676294 /* AddProjectViewController.swift in Sources */,
 				1825A51D1E583EDB00676294 /* FeedViewController.swift in Sources */,
 				184534781E581AB00035409B /* PostUpdateViewController.swift in Sources */,
 			);
