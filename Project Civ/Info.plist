@@ -34,6 +34,17 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Tofino Black.ttf</string>
+		<string>Tofino Bold.ttf</string>
+		<string>Tofino Book.ttf</string>
+		<string>Tofino Light.ttf</string>
+		<string>Tofino Medium.ttf</string>
+		<string>Tofino Regular.ttf</string>
+		<string>Tofino Thin.ttf</string>
+		<string>Tofino Ultra.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

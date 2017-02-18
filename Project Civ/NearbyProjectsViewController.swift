@@ -25,11 +25,6 @@ class NearbyProjectsViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
 
         // for the map
-        
-        extendedLayoutIncludesOpaqueBars = false
-        edgesForExtendedLayout = []
-        automaticallyAdjustsScrollViewInsets = false
-        
         let camera = GMSCameraPosition.camera(withLatitude: 1.2925365, longitude: 103.7747835, zoom: 18.0)
         let mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
         mapView.isMyLocationEnabled = true
@@ -40,13 +35,14 @@ class NearbyProjectsViewController: UIViewController {
         
         view.addSubview(mapView)
         
+        self.tabBarController?.setCustomTitleView(title: "NEARBY PROJECTS")
         
-        view.backgroundColor = UIColor.white
+        tabBarController?.tabBar.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        mapView?.frame = view.bounds
+        mapView?.frame = view.frame
     }
 
     override func didReceiveMemoryWarning() {
