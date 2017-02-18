@@ -12,9 +12,14 @@
 		184534651E5809FD0035409B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184534631E5809FD0035409B /* Main.storyboard */; };
 		184534671E5809FD0035409B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184534661E5809FD0035409B /* Assets.xcassets */; };
 		1845346A1E5809FD0035409B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184534681E5809FD0035409B /* LaunchScreen.storyboard */; };
+		184534721E58145F0035409B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534711E58145F0035409B /* Project.swift */; };
+		184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534731E5814DD0035409B /* NetworkTrialViewController.swift */; };
+		184534761E581A640035409B /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184534751E581A640035409B /* ProjectViewController.swift */; };
+		2BAC5DB7173EAB9575398F94 /* Pods_Project_Civ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10583D41268B7B00E1FCC537 /* Pods-Project Civ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Civ.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ.release.xcconfig"; sourceTree = "<group>"; };
 		1845345C1E5809FD0035409B /* Project Civ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Civ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845345F1E5809FD0035409B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184534611E5809FD0035409B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		184534661E5809FD0035409B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184534691E5809FD0035409B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1845346B1E5809FD0035409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184534711E58145F0035409B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = Model/Project.swift; sourceTree = "<group>"; };
+		184534731E5814DD0035409B /* NetworkTrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTrialViewController.swift; sourceTree = "<group>"; };
+		184534751E581A640035409B /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Civ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0B168ECDE434D8799DCBEE /* Pods-Project Civ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Civ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAC5DB7173EAB9575398F94 /* Pods_Project_Civ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B76E2833719EF5A6316A663 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CDCB32C3FE2B6A7147CB779 /* Pods_Project_Civ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		184534531E5809FD0035409B = {
 			isa = PBXGroup;
 			children = (
 				1845345E1E5809FD0035409B /* Project Civ */,
 				1845345D1E5809FD0035409B /* Products */,
+				6D87CDF7B3F0199CC6B46CC4 /* Pods */,
+				0B76E2833719EF5A6316A663 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +77,24 @@
 			children = (
 				1845345F1E5809FD0035409B /* AppDelegate.swift */,
 				184534611E5809FD0035409B /* ViewController.swift */,
+				184534731E5814DD0035409B /* NetworkTrialViewController.swift */,
 				184534631E5809FD0035409B /* Main.storyboard */,
+				184534711E58145F0035409B /* Project.swift */,
+				184534751E581A640035409B /* ProjectViewController.swift */,
 				184534661E5809FD0035409B /* Assets.xcassets */,
 				184534681E5809FD0035409B /* LaunchScreen.storyboard */,
 				1845346B1E5809FD0035409B /* Info.plist */,
 			);
 			path = "Project Civ";
+			sourceTree = "<group>";
+		};
+		6D87CDF7B3F0199CC6B46CC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B168ECDE434D8799DCBEE /* Pods-Project Civ.debug.xcconfig */,
+				10583D41268B7B00E1FCC537 /* Pods-Project Civ.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1845346E1E5809FD0035409B /* Build configuration list for PBXNativeTarget "Project Civ" */;
 			buildPhases = (
+				4D94F611709CF5E203CA84DB /* [CP] Check Pods Manifest.lock */,
 				184534581E5809FD0035409B /* Sources */,
 				184534591E5809FD0035409B /* Frameworks */,
 				1845345A1E5809FD0035409B /* Resources */,
+				67107C39255664BA21D9A627 /* [CP] Embed Pods Frameworks */,
+				3F1ECD7BC46355AC138BB622 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +168,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F1ECD7BC46355AC138BB622 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D94F611709CF5E203CA84DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67107C39255664BA21D9A627 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project Civ/Pods-Project Civ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		184534581E5809FD0035409B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184534761E581A640035409B /* ProjectViewController.swift in Sources */,
+				184534741E5814DE0035409B /* NetworkTrialViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
+				184534721E58145F0035409B /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +344,7 @@
 		};
 		1845346F1E5809FD0035409B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0B168ECDE434D8799DCBEE /* Pods-Project Civ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AKTPE3FTGW;
@@ -270,6 +358,7 @@
 		};
 		184534701E5809FD0035409B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10583D41268B7B00E1FCC537 /* Pods-Project Civ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AKTPE3FTGW;
@@ -300,6 +389,7 @@
 				184534701E5809FD0035409B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
