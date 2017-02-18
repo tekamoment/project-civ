@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import IGListKit
 
 class ProjectViewController: UIViewController {
 
+    var projectSelected: Project?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,3 +36,8 @@ class ProjectViewController: UIViewController {
     */
 
 }
+
+//
+//extension ProjectViewController: IGListAdapterDataSource {
+//    
+//}
