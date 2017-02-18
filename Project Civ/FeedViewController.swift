@@ -34,28 +34,43 @@ class FeedViewController: UIViewController {
         adapter.collectionView = collectionView
         adapter.dataSource = self
         
-        tabBarController?.edgesForExtendedLayout = []
-        
-        tabBarController?.navigationController?.navigationBar.backgroundColor = UIColor(hex6: 0xE83151)
+//        tabBarController?.edgesForExtendedLayout = []
+        navigationController?.edgesForExtendedLayout = []
+//        edgesForExtendedLayout = []
         // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor(hex6: 0xEEEEEE)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewProjectPressed))
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        edgesForExtendedLayout = []
         super.viewDidAppear(animated)
-        tabBarController?.setCustomTitleView(title: "FEED")
+        navigationItem.setCustomTitleView(title: "FEED")
+
         view.layoutSubviews()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectionView.frame = view.frame
+        collectionView.frame = view.bounds
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func addNewProjectPressed() {
+        let addProjectController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddProjectViewController") as! AddProjectViewController
+        let navigationCont = UINavigationController(rootViewController: addProjectController)
+        navigationCont.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismiss(animated:completion:)))
+        navigationCont.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismiss(animated:completion:)))
+//        projectController.projectSelected = project
+        navigationController?.present(navigationCont, animated: true, completion: nil)
+    }
+    
+    
     
 
     /*
@@ -73,18 +88,35 @@ class FeedViewController: UIViewController {
 extension FeedViewController: IGListAdapterDataSource {
     
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        let items = loader.projects as [IGListDiffable]
-//        items += loader.projects as [IGListDiffable]
+        var items = loader.projects as [IGListDiffable]
+//        items += loader.updates as [IGListDiffable]
         return items
     }
     
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
-            return FeedProjectInfoSectionController()
-
+//        if object is Project {
+            let feedController = FeedProjectInfoSectionController()
+            feedController.delegate = self
+            return feedController
+//        } else {
+//            let updateController = ProjectUpdateSectionController()
+//            return updateController
+//        }
     }
     
     
     func emptyView(for listAdapter: IGListAdapter) -> UIView? { return nil }
     
 }
+
+extension FeedViewController: FeedProjectInfoSectionControllerDelegate {
+    func projectSelected(_ project: Project) {
+        // instantiate
+        let projectController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectViewController") as! ProjectViewController
+        projectController.projectSelected = project
+        self.present(projectController, animated: true, completion: nil)
+    }
+}
+
+

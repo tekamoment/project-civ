@@ -31,6 +31,10 @@ extension ProjectUpdateSectionController: IGListSectionType {
         let components = projectUpdate.fetchUpdateComponents()
         if components[index] == .message {
             return TextCell.cellSize(width: width, string: update.message!)
+        } else if components[index] == .userInfoAndTitle {
+            return ProjectUpdateTitleCell.cellSize(width: width, titleString: update.title, authorString: update.user.name)
+        } else if components[index] == .image {
+            return CGSize(width: width, height: 150)
         }
         return CGSize(width: width, height: 30)
     }
@@ -40,10 +44,14 @@ extension ProjectUpdateSectionController: IGListSectionType {
         var cellClass: AnyClass
         
         switch enumValue {
+        case .userInfoAndTitle:
+            cellClass = ProjectUpdateTitleCell.self
+        case .image:
+            cellClass = ImageCell.self
         case .message:
             cellClass = TextCell.self
-        case .date:
-            cellClass = DateCell.self
+//        case .date:
+//            cellClass = DateCell.self
             
         default:
             fatalError()
@@ -51,13 +59,22 @@ extension ProjectUpdateSectionController: IGListSectionType {
         
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
         
-        if let cell = cell as? TextCell {
-            cell.label.text = projectUpdate.message!
-        } else if let cell = cell as? DateCell {
+        if let cell = cell as? ProjectUpdateTitleCell {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMMM dd, yyyy"
-            cell.label.text = dateFormatter.string(from: projectUpdate.date) + " from " + projectUpdate.user.name
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            cell.titleLabel.text = projectUpdate.title
+            cell.authorLabel.text = projectUpdate.user.name.uppercased() + " ON " + dateFormatter.string(from: projectUpdate.date)
+        } else if let cell = cell as? ImageCell {
+            let image = UIImage(named: "hellohello.jpg")
+            cell.imageView.image = image
+        } else if let cell = cell as? TextCell {
+            cell.label.text = projectUpdate.message!
         }
+//        else if let cell = cell as? DateCell {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MMMM dd, yyyy"
+//            cell.label.text = dateFormatter.string(from: projectUpdate.date)
+//        }
         
         return cell
     }

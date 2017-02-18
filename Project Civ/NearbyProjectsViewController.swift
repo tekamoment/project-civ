@@ -34,14 +34,12 @@ class NearbyProjectsViewController: UIViewController {
         //        print(mapView.myLocation)
         
         view.addSubview(mapView)
-        
-        tabBarController?.tabBar.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tabBarController?.setCustomTitleView(title: "NEARBY PROJECTS")
+        navigationItem.setCustomTitleView(title: "NEARBY PROJECTS")
     }
     
     override func viewDidLayoutSubviews() {

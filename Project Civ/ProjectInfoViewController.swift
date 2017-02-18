@@ -1,15 +1,15 @@
 //
-//  ProjectViewController.swift
+//  ProjectInfoViewController.swift
 //  Project Civ
 //
-//  Created by Carlos Arcenas on 2/18/17.
+//  Created by Carlos Arcenas on 2/19/17.
 //  Copyright © 2017 Rogue Three. All rights reserved.
 //
 
 import UIKit
 import IGListKit
 
-class ProjectViewController: UIViewController {
+class ProjectInfoViewController: UIViewController {
 
     var projectSelected: Project?
     
@@ -22,16 +22,19 @@ class ProjectViewController: UIViewController {
     lazy var adapter: IGListAdapter = {
         return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
         
         view.backgroundColor = UIColor(hex6: 0xEEEEEE)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
+        
+        navigationItem.setCustomTitleView(title: "PROJECT INFORMATION")
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +47,10 @@ class ProjectViewController: UIViewController {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
     }
+    
+    func doneTapped() {
+        self.presentingViewController!.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
@@ -54,39 +61,18 @@ class ProjectViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
-//
-extension ProjectViewController: IGListAdapterDataSource {
+extension ProjectInfoViewController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        var items = [projectSelected!] as [IGListDiffable]
-        items += projectSelected!.updates as [IGListDiffable]
-        return items
+        return [projectSelected!] as [IGListDiffable]
     }
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
-        if object is Project {
-            return ProjectCoverSectionController()
-        } else {
-            return ProjectUpdateSectionController()
-        }
+        return ProjectInfoSectionController()
     }
     
     func emptyView(for listAdapter: IGListAdapter) -> UIView? {
         return nil
-    }
-}
-
-extension ProjectViewController: ProjectCoverSectionControllerDelegate {
-    func closeTapped() {
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    func infoTapped() {
-        let projectInfoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectInfoViewController") as! ProjectInfoViewController
-        projectInfoController.projectSelected = projectSelected!
-        let navCon = UINavigationController(rootViewController: projectInfoController)
-        self.present(navCon, animated: true, completion: nil)
     }
 }

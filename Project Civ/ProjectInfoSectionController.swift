@@ -1,18 +1,16 @@
 //
-//  FeedProjectInfoSectionController.swift
+//  ProjectInfoSectionController.swift
 //  Project Civ
 //
-//  Created by Carlos Arcenas on 2/18/17.
+//  Created by Carlos Arcenas on 2/19/17.
 //  Copyright © 2017 Rogue Three. All rights reserved.
 //
 
 import UIKit
 import IGListKit
-import QuartzCore
 
-class FeedProjectInfoSectionController: IGListSectionController {
+class ProjectInfoSectionController: IGListSectionController {
     var project: Project!
-    var delegate: FeedProjectInfoSectionControllerDelegate?
     
     override init() {
         super.init()
@@ -20,10 +18,9 @@ class FeedProjectInfoSectionController: IGListSectionController {
     }
 }
 
-extension FeedProjectInfoSectionController: IGListSectionType {
+extension ProjectInfoSectionController: IGListSectionType {
     func numberOfItems() -> Int {
-        return 2
-//        return 3
+        return 3
     }
     
     func sizeForItem(at index: Int) -> CGSize {
@@ -31,34 +28,39 @@ extension FeedProjectInfoSectionController: IGListSectionType {
         let width = context.containerSize.width
         
         if index == 0 {
-            return CGSize(width: width, height: 200)
-        } else {
+            return ProjectUpdateTitleCell.cellSize(width: width, titleString: project.holdingOffice, authorString: project.contactNumber)
+        } else if index == 1 {
             return TextCell.cellSize(width: width, string: project.projectDescription)
+        } else {
+            return BoldTextCell.cellSize(width: width, string: "Cost: " + project.costString())
         }
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
-    
         var cellClass: AnyClass
+        
         switch index {
         case 0:
-            cellClass = ProjectNameLocationViewCell.self
+            cellClass = ProjectUpdateTitleCell.self
         case 1:
             cellClass = TextCell.self
+        case 2:
+            cellClass = BoldTextCell.self
         default:
             fatalError()
         }
         
-    
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
-        if let cell = cell as? ProjectNameLocationViewCell {
-            // image
-            cell.nameLabel.text = project.name
-            cell.locationLabel.text = project.location.uppercased()
-            
+        
+        if let cell = cell as? ProjectUpdateTitleCell {
+            cell.titleLabel.text = project.holdingOffice
+            cell.authorLabel.text = project.contactNumber
         } else if let cell = cell as? TextCell {
             cell.label.text = project.projectDescription
+        } else if let cell = cell as? BoldTextCell {
+            cell.label.text = "Cost: " + project.costString()
         }
+        
         return cell
     }
     
@@ -67,13 +69,6 @@ extension FeedProjectInfoSectionController: IGListSectionType {
     }
     
     func didSelectItem(at index: Int) {
-        // present modally
-        if (delegate != nil) {
-            delegate?.projectSelected(project)
-        }
+        // fill this in
     }
-}
-
-protocol FeedProjectInfoSectionControllerDelegate {
-    func projectSelected(_ project: Project)
 }

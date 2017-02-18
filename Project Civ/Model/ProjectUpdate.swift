@@ -12,13 +12,15 @@ import IGListKit
 class ProjectUpdate: NSObject {
     weak var project: Project?
     let user: User
+    let title: String
     let message: String?
     let imageURL: URL?
     let date: Date
     // let reporter: User
-    init(project: Project, user: User, message: String?, imageURL: URL?, date: Date) {
+    init(project: Project, user: User, title: String, message: String?, imageURL: URL?, date: Date) {
         self.project = project
         self.user = user
+        self.title = title
         self.message = message
         self.imageURL = imageURL
         self.date = date
@@ -31,14 +33,16 @@ class ProjectUpdate: NSObject {
         // temp
         var updateComponents = [UpdateComponents]()
         
+        updateComponents.append(.userInfoAndTitle)
+        if (imageURL != nil) { updateComponents.append(.image) }
         if (message != nil) { updateComponents.append(.message) }
-        updateComponents.append(.date)
+//        updateComponents.append(.date)
         return updateComponents
     }
 }
 
 enum UpdateComponents {
-    case userInfo
+    case userInfoAndTitle
     case message
     case image
     case date

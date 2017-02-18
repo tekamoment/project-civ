@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-extension UITabBarController {
+extension UINavigationItem {
     func setCustomTitleView(title: String) {
         let attributes: NSDictionary = [
             NSFontAttributeName:UIFont(name: "Tofino-Bold", size: 17)!,
-            NSForegroundColorAttributeName:UIColor.black,
+            NSForegroundColorAttributeName:UIColor.white,
             NSKernAttributeName:CGFloat(2.0)
         ]
         
@@ -29,7 +29,7 @@ extension UITabBarController {
         titleLabel.attributedText = attrString
         titleLabel.sizeToFit()
         
-        navigationItem.titleView = titleLabel
+        titleView = titleLabel
     }
     
     

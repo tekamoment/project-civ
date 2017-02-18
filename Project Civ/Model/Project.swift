@@ -38,6 +38,15 @@ class Project: NSObject {
         self.dateExpectedCompletion = dateExpectedCompletion
         self.projectDescription = projectDescription
     }
+    
+    func costString() -> String {
+        let costNumber = cost as NSNumber
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "en_PH")
+        return formatter.string(from: costNumber)!
+    }
 }
 
 class User: NSObject {
