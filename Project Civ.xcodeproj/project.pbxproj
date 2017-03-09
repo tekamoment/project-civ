@@ -44,6 +44,11 @@
 		189D0E2C1E58ABDA0046DCD5 /* hellohello.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */; };
 		189D0E2E1E58B79B0046DCD5 /* TrackedProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D0E2D1E58B79B0046DCD5 /* TrackedProjectsViewController.swift */; };
 		18A9A6801E58E5AC00315A8E /* VoteSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A67F1E58E5AC00315A8E /* VoteSectionController.swift */; };
+		18A9A6821E58E81700315A8E /* VoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A6811E58E81700315A8E /* VoteCell.swift */; };
+		18A9A6881E5900DB00315A8E /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A6871E5900DB00315A8E /* DismissAnimator.swift */; };
+		18A9A68A1E59051E00315A8E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A6891E59051E00315A8E /* Interactor.swift */; };
+		18A9A68C1E590F0E00315A8E /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A68B1E590F0E00315A8E /* Networker.swift */; };
+		18C4E33D1E5938AD0032B538 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C4E33C1E5938AD0032B538 /* GoogleService-Info.plist */; };
 		18E391E51E58488600704FC0 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E41E58488600704FC0 /* TextCell.swift */; };
 		18E391E71E5848D000704FC0 /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E61E5848D000704FC0 /* TextSize.swift */; };
 		18E391E91E58585400704FC0 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E391E81E58585400704FC0 /* DateCell.swift */; };
@@ -97,6 +102,11 @@
 		189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hellohello.jpg; sourceTree = "<group>"; };
 		189D0E2D1E58B79B0046DCD5 /* TrackedProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackedProjectsViewController.swift; sourceTree = "<group>"; };
 		18A9A67F1E58E5AC00315A8E /* VoteSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteSectionController.swift; sourceTree = "<group>"; };
+		18A9A6811E58E81700315A8E /* VoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCell.swift; sourceTree = "<group>"; };
+		18A9A6871E5900DB00315A8E /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		18A9A6891E59051E00315A8E /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		18A9A68B1E590F0E00315A8E /* Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		18C4E33C1E5938AD0032B538 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18E391E41E58488600704FC0 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		18E391E61E5848D000704FC0 /* TextSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
 		18E391E81E58585400704FC0 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
@@ -183,6 +193,8 @@
 		1845345E1E5809FD0035409B /* Project Civ */ = {
 			isa = PBXGroup;
 			children = (
+				18A9A6891E59051E00315A8E /* Interactor.swift */,
+				18A9A6871E5900DB00315A8E /* DismissAnimator.swift */,
 				1845345F1E5809FD0035409B /* AppDelegate.swift */,
 				1825A5141E58347B00676294 /* UITabBarController+TitleView.swift */,
 				18E391E21E58484E00704FC0 /* View Controllers */,
@@ -196,6 +208,7 @@
 				1845346B1E5809FD0035409B /* Info.plist */,
 				189D0E2B1E58ABDA0046DCD5 /* hellohello.jpg */,
 				18978C051E5890EF0009A028 /* Arete.jpg */,
+				18C4E33C1E5938AD0032B538 /* GoogleService-Info.plist */,
 				1825A5131E58314600676294 /* Tofino */,
 			);
 			path = "Project Civ";
@@ -230,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				184534711E58145F0035409B /* Project.swift */,
+				18A9A68B1E590F0E00315A8E /* Networker.swift */,
 				1825A5211E58434E00676294 /* ProjectUpdate.swift */,
 			);
 			name = Model;
@@ -242,6 +256,7 @@
 				18E391F01E586D9B00704FC0 /* ProjectNameLocationViewCell.swift */,
 				18978C071E589CF50009A028 /* ProjectCoverViewCell.swift */,
 				18E391E41E58488600704FC0 /* TextCell.swift */,
+				18A9A6811E58E81700315A8E /* VoteCell.swift */,
 				189D0E271E58A6300046DCD5 /* ProjectUpdateTitleCell.swift */,
 				18990E621E58DF0900EBCF65 /* BoldTextCell.swift */,
 				18E391E61E5848D000704FC0 /* TextSize.swift */,
@@ -332,6 +347,7 @@
 				184534671E5809FD0035409B /* Assets.xcassets in Resources */,
 				1825A50E1E58314100676294 /* Tofino Light.ttf in Resources */,
 				189D0E2C1E58ABDA0046DCD5 /* hellohello.jpg in Resources */,
+				18C4E33D1E5938AD0032B538 /* GoogleService-Info.plist in Resources */,
 				1825A50F1E58314100676294 /* Tofino Medium.ttf in Resources */,
 				184534651E5809FD0035409B /* Main.storyboard in Resources */,
 				1825A50D1E58314100676294 /* Tofino Book.ttf in Resources */,
@@ -394,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E391F31E586F2800704FC0 /* UIColor+Hex.swift in Sources */,
+				18A9A6821E58E81700315A8E /* VoteCell.swift in Sources */,
+				18A9A68C1E590F0E00315A8E /* Networker.swift in Sources */,
 				18E391F51E58725300704FC0 /* FeedProjectInfoSectionController.swift in Sources */,
 				18E391ED1E585D4100704FC0 /* NSObject+IGListDiffable.swift in Sources */,
 				1845347A1E581AE60035409B /* SuggestionViewController.swift in Sources */,
@@ -405,6 +423,7 @@
 				18E391EB1E5859A500704FC0 /* StaticDataLoader.swift in Sources */,
 				185AA6781E58235B00E50847 /* NearbyProjectsViewController.swift in Sources */,
 				184534621E5809FD0035409B /* ViewController.swift in Sources */,
+				18A9A6881E5900DB00315A8E /* DismissAnimator.swift in Sources */,
 				1825A5151E58347B00676294 /* UITabBarController+TitleView.swift in Sources */,
 				189D0E2E1E58B79B0046DCD5 /* TrackedProjectsViewController.swift in Sources */,
 				18E391F11E586D9B00704FC0 /* ProjectNameLocationViewCell.swift in Sources */,
@@ -421,6 +440,7 @@
 				184534601E5809FD0035409B /* AppDelegate.swift in Sources */,
 				18990E5D1E58D79400EBCF65 /* ImageRow.swift in Sources */,
 				184534721E58145F0035409B /* Project.swift in Sources */,
+				18A9A68A1E59051E00315A8E /* Interactor.swift in Sources */,
 				18978C081E589CF50009A028 /* ProjectCoverViewCell.swift in Sources */,
 				18E391E51E58488600704FC0 /* TextCell.swift in Sources */,
 				18E391E71E5848D000704FC0 /* TextSize.swift in Sources */,
