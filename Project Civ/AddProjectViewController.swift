@@ -8,6 +8,9 @@
 
 import UIKit
 import Eureka
+import CoreLocation
+
+import Firebase
 
 class AddProjectViewController: FormViewController {
     override func viewDidLoad() {
@@ -76,6 +79,16 @@ class AddProjectViewController: FormViewController {
                         cell.textLabel?.textColor = .red
                     }
             }
+            <<< PushRow<String>("City") {
+                $0.title = "City"
+                $0.selectorTitle = "Pick the city"
+                $0.options = ["Quezon City", "Manila", "Makati", "Marikina"].sorted()
+                $0.validationOptions = .validatesOnChangeAfterBlurred
+                }.cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.textLabel?.textColor = .red
+                    }
+            }
             <<< PhoneRow("ContactNumber") {
                 $0.title = "Project Contact Number"
                 $0.add(rule: RuleRequired())
@@ -95,7 +108,7 @@ class AddProjectViewController: FormViewController {
                     }
             }
             +++ Section()
-            <<< ImageRow() {
+            <<< ImageRow("Image") {
                 $0.title = "Image"
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChangeAfterBlurred
@@ -104,7 +117,6 @@ class AddProjectViewController: FormViewController {
                         cell.textLabel?.textColor = .red
                     }
             }
-
             <<< TextAreaRow("ProjectDescription") {
                 $0.placeholder = "Describe this project"
                 $0.add(rule: RuleRequired())
@@ -120,20 +132,25 @@ class AddProjectViewController: FormViewController {
         let valuesDictionary = form.values()
         print(valuesDictionary)
         
+        var allClear = true
+        
         for (_, value) in form.values() {
             if value != nil {
                 // present
+                allClear = false
                 let alert = UIAlertController(title: "Unsaved changes", message: "Are you sure you want to leave? Your changes will not be saved.", preferredStyle: .actionSheet)
                 alert.addAction(UIAlertAction(title: "Discard changes", style: .destructive, handler: { (_) in
                     self.presentingViewController!.dismiss(animated: true, completion: nil)
                 }))
                 alert.addAction(UIAlertAction(title: "Go back", style: .cancel, handler: nil))
                 present(alert, animated: true, completion: nil)
-                
+                break
             }
         }
         
-        self.presentingViewController!.dismiss(animated: true, completion: nil)
+        if allClear {
+            self.presentingViewController!.dismiss(animated: true, completion: nil)
+        }
     }
     
     func doneTapped() {
@@ -150,8 +167,44 @@ class AddProjectViewController: FormViewController {
             }
         }
         
+        let progressView = UIProgressView(frame: view.bounds)
+        view.addSubview(progressView)
+        
+        let location = (self.form.rowBy(tag: "Location") as! LocationRow).value! as CLLocation
+        
+        let storageRef = FIRStorage.storage().reference()
+        let locationRef = storageRef.child("images/\(location.coordinate.longitude)+\(location.coordinate.latitude).jpg")
+        
+        let image = (self.form.rowBy(tag: "Image") as! ImageRow).value!
+        
+        let data = UIImageJPEGRepresentation(image, 0.8)!
+        let metadata = FIRStorageMetadata()
+        metadata.contentType = "image/jpg"
+        locationRef.put(data, metadata: metadata){(metadata, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            } else {
+                //store downloadURL
+//                let downloadURL = metadata!.downloadURL()!.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                let downloadURL = metadata!.downloadURL()!.absoluteString
+                print(downloadURL)
+                //store downloadURL at database
+                
+                let proj = Project(id: "0", imageURL: downloadURL, name: (self.form.rowBy(tag: "Name") as! TextRow).value!, holdingOffice: (self.form.rowBy(tag: "LocalGovernment") as! TextRow).value!, longitude: location.coordinate.longitude, latitude: location.coordinate.latitude, location: (self.form.rowBy(tag: "City") as! PushRow<String>).value!, contactNumber: (self.form.rowBy(tag: "ContactNumber") as! PhoneRow).value!, cost: (self.form.rowBy(tag: "Cost") as! DecimalRow).value!, dateStarted: (self.form.rowBy(tag: "DateStarted") as! DateRow).value!, dateExpectedCompletion: (self.form.rowBy(tag: "DateExpectedCompletion") as! DateRow).value!, projectDescription: (self.form.rowBy(tag: "ProjectDescription") as! TextAreaRow).value!, upvotes: 0, downvotes: 0)
+                ProjectSource.sharedInstance.postNewProject(project: proj) {
+                    print("Posted successfully.")
+                    progressView.removeFromSuperview()
+                    self.presentingViewController!.dismiss(animated: true, completion: nil)
+                }
+                
+//                self.databaseRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues(["userPhoto": downloadURL])
+            }
+            
+        }
+        
+        
         // else, push
-
     }
 }
 

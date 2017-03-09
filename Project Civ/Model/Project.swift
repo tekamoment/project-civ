@@ -10,21 +10,23 @@ import Foundation
 import IGListKit
 
 class Project: NSObject {
-    let id: String
-    let imageURL: URL?
-    let name: String
-    let holdingOffice: String
-    let longitude: Double
-    let latitude: Double
-    let location: String
-    let contactNumber: String
-    let cost: Double
-    let dateStarted: Date
-    let dateExpectedCompletion: Date
-    let projectDescription: String
+    let id: String //
+    let imageURL: String
+    let name: String //
+    let holdingOffice: String //
+    let longitude: Double //
+    let latitude: Double //
+    let location: String 
+    let contactNumber: String //
+    let cost: Double //
+    let dateStarted: Date //
+    let dateExpectedCompletion: Date //
+    let projectDescription: String //
     var updates: [ProjectUpdate] = [ProjectUpdate]()
+    var upvotes: Int //
+    var downvotes: Int //
     
-    init(id: String, imageURL: URL?, name: String, holdingOffice: String, longitude: Double, latitude: Double, location: String, contactNumber: String, cost: Double, dateStarted: Date, dateExpectedCompletion: Date, projectDescription: String) {
+    init(id: String, imageURL: String, name: String, holdingOffice: String, longitude: Double, latitude: Double, location: String, contactNumber: String, cost: Double, dateStarted: Date, dateExpectedCompletion: Date, projectDescription: String, upvotes: Int, downvotes: Int) {
         self.id = id
         self.imageURL = imageURL
         self.name = name
@@ -37,6 +39,8 @@ class Project: NSObject {
         self.dateStarted = dateStarted
         self.dateExpectedCompletion = dateExpectedCompletion
         self.projectDescription = projectDescription
+        self.upvotes = upvotes
+        self.downvotes = downvotes
     }
     
     func costString() -> String {
@@ -51,10 +55,10 @@ class Project: NSObject {
 
 class User: NSObject {
     let name: String
-    let username: String
+    let username: String?
     let imageURL: URL?
     
-    init(name: String, username: String, imageURL: URL?) {
+    init(name: String, username: String?, imageURL: URL?) {
         self.name = name
         self.username = username
         self.imageURL = imageURL

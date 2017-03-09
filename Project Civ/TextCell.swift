@@ -37,5 +37,6 @@ class TextCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         label.frame = UIEdgeInsetsInsetRect(bounds, TextCell.inset)
+        print("layoutSubviews \(label.frame)")
     }
 }

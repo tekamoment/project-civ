@@ -9,6 +9,8 @@
 import UIKit
 
 import GoogleMaps
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
         GMSServices.provideAPIKey("AIzaSyDodrTvWnK7fj_vnT68KI-S6OkoxHnu4oI")
         UINavigationBar.appearance().barTintColor = UIColor(hex6: 0x387780)
         UINavigationBar.appearance().tintColor = UIColor.white
 
         UITabBar.appearance().barTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor(hex6: 0x387780)
+        
+        FIRApp.configure()
         
         return true
     }

@@ -8,6 +8,8 @@
 
 import UIKit
 import IGListKit
+import FirebaseStorage
+import FirebaseStorageUI
 
 class ProjectCoverSectionController: IGListSectionController, ProjectCoverViewCellDelegate {
     var project: Project!
@@ -16,22 +18,37 @@ class ProjectCoverSectionController: IGListSectionController, ProjectCoverViewCe
 
 extension ProjectCoverSectionController: IGListSectionType {
     func numberOfItems() -> Int {
-        return 1
+        return 2
     }
     
     func sizeForItem(at index: Int) -> CGSize {
         guard let context = collectionContext, let _ = project else { return .zero }
         
-        return CGSize(width: context.containerSize.width, height: context.containerSize.height)
+        let width = context.containerSize.width
+        
+        if index == 0 {
+            return CGSize(width: context.containerSize.width, height: context.containerSize.height)
+        } else {
+            return CGSize(width: width, height: 70)
+        }
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
+        if index == 0 {
         let cell = collectionContext!.dequeueReusableCell(of: ProjectCoverViewCell.self, for: self, at: index) as! ProjectCoverViewCell
         // image
         cell.nameLabel.text = project.name
         cell.locationLabel.text = project.location.uppercased()
+        cell.imageView.sd_setImage(with: FIRStorage.storage().reference(forURL: project.imageURL), placeholderImage: UIImage(named: "Arete.jpg"))
         cell.delegate = self
+            cell.layoutSubviews()
         return cell
+        } else {
+            let cell = collectionContext!.dequeueReusableCell(of: VoteCell.self, for: self, at: index) as! VoteCell
+            cell.upvoteButton.setTitle("+" + String(describing: project.upvotes), for: .normal)
+            cell.downvoteButton.setTitle("-" + String(describing: project.downvotes), for: .normal)
+            return cell
+        }
     }
     
     func didUpdate(to object: Any) {

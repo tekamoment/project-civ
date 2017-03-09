@@ -18,6 +18,7 @@ class ProjectCoverViewCell: UICollectionViewCell {
     static func cellSize(width: CGFloat, nameString: String, locationString: String) -> CGSize {
         let nameBounds = TextSize.size(nameString, font: ProjectCoverViewCell.nameFont, width: width, insets: UIEdgeInsets(top: 8, left: 15, bottom: 10, right: 15))
         let locationBounds = TextSize.size(locationString, font: ProjectCoverViewCell.locationFont, width: width, insets: ProjectCoverViewCell.commonInsets)
+        print("namebounds: \(nameBounds)")
         return CGSize(width: width, height: nameBounds.height + locationBounds.height)
     }
     
@@ -34,7 +35,10 @@ class ProjectCoverViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "hellohello.jpg")
+        
+//        imageView.sd_setImage(with: <#T##FIRStorageReference#>)
+        
+        imageView.image = UIImage(named: "Arete.jpg")
         
         return imageView
     }()
@@ -46,6 +50,7 @@ class ProjectCoverViewCell: UICollectionViewCell {
         label.font = ProjectCoverViewCell.nameFont
 //        label.textColor = UIColor(hex6: 0xE83151)
         label.textColor = UIColor.white
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
@@ -104,9 +109,13 @@ class ProjectCoverViewCell: UICollectionViewCell {
         
         locationLabel.frame.origin.y = frame.height - locationLabelRect.size.height
         
+        nameLabel.preferredMaxLayoutWidth = frame.width
+        
         let nameLabelRect = TextSize.size(nameLabel.text!, font: ProjectCoverViewCell.nameFont, width: frame.width, insets: UIEdgeInsets(top: 8, left: 15, bottom: 10, right: 15))
+        
+        print("nameLabelRect: size \(nameLabelRect) for text \(nameLabel.text!)")
 
-        nameLabel.frame = UIEdgeInsetsInsetRect(nameLabelRect, UIEdgeInsets(top: 0, left: 15, bottom: 10, right: 15))
+        nameLabel.frame = UIEdgeInsetsInsetRect(nameLabelRect, UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15))
         
         nameLabel.frame.origin.y = locationLabel.frame.origin.y - nameLabel.frame.height
         

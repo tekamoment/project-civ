@@ -9,6 +9,8 @@
 import UIKit
 import IGListKit
 import QuartzCore
+import FirebaseStorage
+import FirebaseStorageUI
 
 class FeedProjectInfoSectionController: IGListSectionController {
     var project: Project!
@@ -51,8 +53,8 @@ extension FeedProjectInfoSectionController: IGListSectionType {
         
     
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
-        if let cell = cell as? ProjectNameLocationViewCell {
-            // image
+        if let cell = cell as? ProjectNameLocationViewCell {            
+            cell.imageView.sd_setImage(with: FIRStorage.storage().reference(forURL: project.imageURL), placeholderImage: UIImage(named: "Arete.jpg"))
             cell.nameLabel.text = project.name
             cell.locationLabel.text = project.location.uppercased()
             

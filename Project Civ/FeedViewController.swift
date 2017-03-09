@@ -13,7 +13,11 @@ import IGListKit
 
 class FeedViewController: UIViewController {
     
+    var selectedProject: Project?
+    
     let loader = StaticDataLoader()
+    
+    let interactor = Interactor()
     
     let collectionView: IGListCollectionView = {
         let view = IGListCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -25,10 +29,18 @@ class FeedViewController: UIViewController {
         return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
 
+    var projects = [Project]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ProjectSource.sharedInstance.fetchProjects(longitude: 10, latitude: 10) { (projects) in
+            print(projects!)
+            self.projects = projects!
+            self.adapter.reloadData(completion: nil)
+        }
 
-        loader.load()
+//        loader.load()
         
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
@@ -71,7 +83,15 @@ class FeedViewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? ProjectViewController {
+            destinationViewController.projectSelected = selectedProject!
+            destinationViewController.transitioningDelegate = self
+            destinationViewController.interactor = interactor
+        }
+    }
     
+    @IBAction func unwindToFeed(segue: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation
@@ -88,9 +108,9 @@ class FeedViewController: UIViewController {
 extension FeedViewController: IGListAdapterDataSource {
     
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        var items = loader.projects as [IGListDiffable]
+//        var items = loader.projects as [IGListDiffable]
 //        items += loader.updates as [IGListDiffable]
-        return items
+        return projects as [IGListDiffable]
     }
     
     
@@ -112,11 +132,23 @@ extension FeedViewController: IGListAdapterDataSource {
 
 extension FeedViewController: FeedProjectInfoSectionControllerDelegate {
     func projectSelected(_ project: Project) {
+        selectedProject = project
         // instantiate
-        let projectController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectViewController") as! ProjectViewController
-        projectController.projectSelected = project
-        self.present(projectController, animated: true, completion: nil)
+//        let projectController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectViewController") as! ProjectViewController
+//        projectController.projectSelected = project
+//        self.present(projectController, animated: true, completion: nil)
+        performSegue(withIdentifier: "showProjectControllerSegue", sender: nil)
     }
 }
 
+
+extension FeedViewController: UIViewControllerTransitioningDelegate {
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissAnimator()
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
+    }
+}
 

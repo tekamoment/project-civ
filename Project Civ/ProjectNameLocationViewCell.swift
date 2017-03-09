@@ -33,8 +33,6 @@ class ProjectNameLocationViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "Arete.jpg")
-
         return imageView
     }()
     
@@ -78,7 +76,7 @@ class ProjectNameLocationViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = self.frame
+        imageView.frame = self.bounds
         
         let locationLabelRect = TextSize.size(locationLabel.text!, font: ProjectNameLocationViewCell.locationFont, width: frame.width, insets: ProjectNameLocationViewCell.commonInsets)
         locationLabel.frame = UIEdgeInsetsInsetRect(locationLabelRect, ProjectNameLocationViewCell.commonInsets)

@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkTrialViewController: UIViewController {
 
-    let elijahURL = "10.101.11.143:9999/main/register"
+    let elijahURL = "10.101.15.46:9999/project/viewallprojects"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +26,8 @@ class NetworkTrialViewController: UIViewController {
     
     @IBAction func testNetworkPressed(_ sender: Any) {
         print("http://\(elijahURL)")
-        Alamofire.request(URL(string: "http://\(elijahURL)")!, method: .post, parameters: ["username" : "trial_user"], encoding: JSONEncoding.default, headers: ["Accept" : "application/json"]).responseJSON { response in
-            print("URL requested: \(response.request!)")
-            
-            guard response.result.isSuccess else {
-                print(response.result.error!)
-                print(response.data!)
-                print("Unable to request from Elijah API.")
-                return
-            }
-            
-            print("JSON returns: \(response.result.value!)")
+        ProjectSource.sharedInstance.fetchProjects(longitude: 10.0, latitude: 10.0) { (projects) in
+            print(projects!)
         }
     }
 
